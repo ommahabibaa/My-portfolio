@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="Main-menu">
+            <nav class="navbar navbar-expand-lg navbar-dark px-4 py-1 shadow-sm">
+                <a class="navbar-brand fw-bold text-white" href="#">
+                    <img class="nav-logo" src="images/logo.png" alt="logo">
+                    <span class="logo-text">Omma Habiba...</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav me-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-info" href="#home">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#about">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#resume">RESUME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#portfolio">PORTFOLIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-light rounded-pill d-flex align-items-center gap-2" href="Paula_CV.pdf"
+                        download>DOWNLOAD CV
+                        <i class="bi bi-download"></i>
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="background-bg">
+            <div class="background-filter circle">
+                <div class="background-img"></div>
+            </div>
+        </div>
+        <div class="saction">
+            <div class="scroll-content">
+                <div class="h-subtitles">
+                    <h1 class="h-title">
+                        Omma <br>Habiba Noushin
+                    </h1>
+                    <div class="typed-subtitle">
+                        <span id="typed-text"></span><span class="typed-cursor">|</span>
+                    </div>
+
+                    <!-- Hidden phrases -->
+                    <div class="typing-subtitle" style="display: none;">
+                        <p>ASP.Net Developer</p>
+                        <p>Web Designer</p>
+                        <p>Programmer</p>
+                    </div>
+                </div>
+                <section class="about">
+                    <hr>
+                    <div class="heading">About Me</div>
+                    <div class="subheading">MY STORY</div>
+
+                    <div class="content">
+                        <div class="text">
+                            Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                            blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </div>
+                        <div class="text">
+                            Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                            blandit nunc, eu sollicitudin urna dolor sagittis lacus.
+                        </div>
+                        <div class="text full">
+                            Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue
+                            blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec,
+                            volutpat a, suscipit non, turpis.
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <div class="info-item"><span class="label">AGE:</span> 22</div>
+                        <div class="info-item"><span class="label">RESIDENCE:</span> Bangladesh</div>
+                        <div class="info-item"><span class="label">FREELANCE:</span> Available</div>
+                        <div class="info-item"><span class="label">ADDRESS:</span>Dhaka</div>
+                        <div class="info-item">
+                            <span class="label">PHONE:</span>
+                            <a href="https://wa.me/8801890447672" target="_blank" style="color: white; ">
+                                +8801890447672
+                            </a>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="label">E-MAIL:</span>
+                            <a href="mailto:ommahabiba9044@gmail.com" style="color: white; ">
+                                ommahabiba9044@gmail.com
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <hr>
+                </section>
+                <section class="projects-section">
+                    <div class="heading">
+                        <h2 class="heading">My Projects</h2>
+                    </div>
+                    <br>
+
+                    <div class="projects-grid">
+                        <!-- Project Card 1 -->
+                        <article class="project-card">
+                            <div class="carousel">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="https://picsum.photos/id/1041/600/300"
+                                            alt="screenshot 1"></div>
+                                    <div class="carousel-slide"><img src="https://picsum.photos/id/1043/600/300"
+                                            alt="screenshot 2"></div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button class="btn-ctrl" data-action="prev">◀</button>
+                                    <button class="btn-ctrl" data-action="next">▶</button>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">Mini Project 1</h3>
+                                <p class="project-desc">Compact project card with smaller slider.</p>
+                                <div class="meta">Tech: HTML, CSS, JS | 2025</div>
+                                <div class="actions">
+                                    <a class="btn github" href="https://github.com/your-username/project1"
+                                        target="_blank">GitHub</a>
+                                    <button class="btn demo"
+                                        onclick="openModal('Mini Project 1', ['https://picsum.photos/id/1041/600/300','https://picsum.photos/id/1043/600/300'], 'Full details: This project is a compact card with a carousel slider. It was built using HTML, CSS, and JavaScript. Features include image carousel, responsive design, and demo modal popup.')">Demo</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project Card 2 -->
+                        <article class="project-card">
+                            <div class="carousel">
+                                <div class="carousel-track">
+                                    <div class="carousel-slide"><img src="https://picsum.photos/id/1050/600/300"
+                                            alt="screenshot 1"></div>
+                                    <div class="carousel-slide"><img src="https://picsum.photos/id/1052/600/300"
+                                            alt="screenshot 2"></div>
+                                </div>
+                                <div class="carousel-controls">
+                                    <button class="btn-ctrl" data-action="prev">◀</button>
+                                    <button class="btn-ctrl" data-action="next">▶</button>
+                                </div>
+                            </div>
+                            <div class="project-details">
+                                <h3 class="project-title">Mini Project 2</h3>
+                                <p class="project-desc">Another card beside the first one.</p>
+                                <div class="meta">Tech: React, CSS | 2025</div>
+                                <div class="actions">
+                                    <a class="btn github" href="https://github.com/your-username/project2"
+                                        target="_blank">GitHub</a>
+                                    <button class="btn demo"
+                                        onclick="openModal('Mini Project 2', ['https://picsum.photos/id/1050/600/300','https://picsum.photos/id/1052/600/300'], 'Full details: This project demonstrates React features with carousel. Includes responsive layout, GitHub integration, and demo popup modal for details.')">Demo</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Modal -->
+                <div id="detailsModal" class="modal">
+                    <div class="modal-content">
+                        <button class="close-icon" id="modalCloseBtn" aria-label="Close">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+
+                        <div class="modal-body">
+                            <div class="modal-left">
+                                <div class="modal-carousel">
+                                    <img id="modalImage" src="" alt="project image">
+                                    <div class="slide-indicators" id="slideIndicators"></div>
+                                </div>
+                            </div>
+                            <div class="modal-right">
+                                <h2 id="modalTitle"></h2>
+                                <p id="modalDescription"></p>
+                                <div class="modal-meta" id="modalMeta"></div>
+                                <a id="modalGithub" href="#" target="_blank" class="btn github">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
