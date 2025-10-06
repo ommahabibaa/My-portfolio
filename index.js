@@ -28,22 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
         type();
     }
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const carousels = document.querySelectorAll(".carousel");
+    // ---------------- Carousel Setup ----------------
+    const carousels = document.querySelectorAll(".carousel");
+    carousels.forEach(carousel => {
+        const track = carousel.querySelector(".carousel-track");
+        const slides = carousel.querySelectorAll(".carousel-slide");
 
-        carousels.forEach(carousel => {
-            const track = carousel.querySelector(".carousel-track");
-            const slides = carousel.querySelectorAll(".carousel-slide");
+        let index = 0;
+        const total = slides.length;
 
-            let index = 0;
-            const total = slides.length;
-
-            // Auto-slide function (⚡ every 1.5 seconds)
-            setInterval(() => {
-                index = (index + 1) % total;
-                track.style.transform = `translateX(-${index * 100}%)`;
-            }, 1500); // 🔁 speed: 1500ms = 1.5 seconds per image
-        });
+        setInterval(() => {
+            index = (index + 1) % total;
+            track.style.transform = `translateX(-${index * 100}%)`;
+        }, 1500);
     });
 
 
@@ -63,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         interval: null
     };
 
-    // Helper functions
     function setActiveIndicator(index) {
         [...indicatorsContainer.children].forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
@@ -115,22 +111,34 @@ document.addEventListener("DOMContentLoaded", () => {
         restartAutoSlide();
     };
 
-    // ✅ Close button — only added once
+    // ✅ Close Modal
+    function closeModal() {
+        modal.style.display = 'none';
+        if (modalData.interval) clearInterval(modalData.interval);
+    }
+
     closeBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         closeModal();
     });
 
-    // ✅ Click outside content to close
     modal.addEventListener('click', (e) => {
         if (!e.target.closest('.modal-content')) {
             closeModal();
         }
     });
 
-    function closeModal() {
-        modal.style.display = 'none';
-        if (modalData.interval) clearInterval(modalData.interval);
+
+    // ---------------- ✅ Force Download CV ----------------
+    const downloadBtn = document.querySelector('a[href="images/Omma-HabibaCV.pdf"]');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'images/Omma-HabibaCV.pdf';
+            link.download = 'Omma-HabibaCV.pdf';
+            link.click();
+        });
     }
 
 });
